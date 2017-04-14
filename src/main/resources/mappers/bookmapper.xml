@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bcg.mappers.bookmapper">
+
+	<select id="selectByTitle" parameterType="java.lang.String"
+		resultType="bcg.common.entity.CompareBook">
+		select bookcode, title, totalscore, imgurl from bookinfo
+		where title like '%'|| #{title} || '%'
+	</select>
+
+
+	<select id="selectAll" resultType="bcg.common.entity.CompareBook">
+		select bookcode, imgurl,
+		title, totalscore from bookinfo
+	</select>
+
+
+	<select id="selectGenre" resultType="bcg.common.entity.Genre">
+		select genrename, genrecode from genre
+	</select>
+
+	<select id="selectClass" resultType="bcg.common.entity.Class">
+		select classname, classcode from class
+	</select>
+	
+	<select id= "orderbyTotalScore" resultType="bcg.common.entity.CompareBook">
+		select bookcode, title, totalscore, imgurl from bookinfo
+		order by totalscore desc
+	</select>
+
+</mapper>
