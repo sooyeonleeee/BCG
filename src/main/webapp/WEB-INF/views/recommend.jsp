@@ -15,6 +15,10 @@
 	background: #333333;
 }
 
+.nav-justified {
+	background: #333333;
+}
+
 .navbar {
 	background: #333333;
 }
@@ -69,6 +73,7 @@ $(document).ready(function(){
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				document.getElementById("page").innerHTML = this.responseText;
+				eval(document.getElementById("page").innerHTML);
 			}
 		};
 		xhttp.open("GET", "/bcg/recommendAll", true);
@@ -80,6 +85,7 @@ $(document).ready(function(){
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				document.getElementById("page").innerHTML = this.responseText;
+				eval(document.getElementById("page").innerHTML);
 			}
 		};
 		xhttp.open("GET", "/bcg/recommendByCategory", true);
@@ -92,16 +98,6 @@ $(document).ready(function(){
 		var g = document.getElementById("selectedGenre").val;
 		var c = document.getElementById("selectedClass").val;
 		sum = g+c;
-	}
-	
-	function clickGenre(genrecode) {
-		 $.ajax({
-			 type: "GET",
-			 url: "/bcg/sortByCondition",
-			 data: sum,
-			 success: function(result){
-	            $("#result").html(result);
-	        }});
 	}
 	
 	function clickClass(classcode) {
