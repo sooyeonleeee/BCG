@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import bcg.common.dao.RecommendDAO;
-import bcg.common.entity.Class;
+import bcg.common.entity.BookInfo;
 import bcg.common.entity.CompareBook;
 import bcg.common.entity.Genre;
 
@@ -22,13 +22,13 @@ public class RecommendServiceImpl implements RecommendService {
 	}
 
 	@Override
-	public List<Class> getClasses() {
-		return dao.getClassList();
+	public List<CompareBook> getOrderedBookList() {
+		return dao.getSortedBookList();
 	}
 
 	@Override
-	public List<CompareBook> getOrderedBookList() {
-		return dao.getSortedBookList();
+	public List<BookInfo> getBookListByGenreWithClassList(String genreCode, String classCode, Integer page) {
+		return dao.getBookListByGenreWithClassList(genreCode, classCode, page != null ? page : 0);
 	}
 
 }

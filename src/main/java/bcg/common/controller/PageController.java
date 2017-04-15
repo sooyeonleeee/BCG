@@ -1,12 +1,20 @@
 package bcg.common.controller;
 
+import java.util.AbstractMap.SimpleEntry;
+import java.util.ArrayList;
 import java.util.List;
 
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import bcg.common.entity.BookInfo;
 import bcg.common.entity.CompareBook;
 import bcg.common.service.RecommendServiceImpl;
 import bcg.common.service.SearchServiceImpl;
@@ -62,7 +70,22 @@ public class PageController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("recommendByCategory");
 		mav.addObject("genreList", rservice.getGenres());
-		mav.addObject("classList", rservice.getClasses());
+		List<SimpleEntry<String, String>> classList = new ArrayList<SimpleEntry<String, String>>();
+		classList.add(new SimpleEntry<String, String>("satisfactionscore", "만족도"));
+		classList.add(new SimpleEntry<String, String>("impressionscore", "느낌"));
+		classList.add(new SimpleEntry<String, String>("legibilityscore", "가독성"));
+		classList.add(new SimpleEntry<String, String>("compositionscore", "구성"));
+		classList.add(new SimpleEntry<String, String>("authorscore", "작가"));
+		classList.add(new SimpleEntry<String, String>("designscore", "표지디자인"));
+		classList.add(new SimpleEntry<String, String>("usefulnessscore", "유익성"));
+		mav.addObject("classList", classList);
+		return mav;
+	}
+	
+	@RequestMapping("/recommendByCategory.js")
+	public ModelAndView callPageCategoryJS() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("recommendByCategoryJS");
 		return mav;
 	}
 
@@ -72,6 +95,23 @@ public class PageController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("compare");
 		return mav;
+	}
+	
+	@RequestMapping("/sortedbookinfo")
+	@ResponseBody
+	public String getBookListByGenreWithClass(String genreCode, String classCode, Integer page) {
+		ObjectMapper mapper = new ObjectMapper();
+		classCode = classCode.equals("undefined") || classCode == null ? "totalscore" : classCode;
+		genreCode = genreCode.equals("undefined") ? null : genreCode;
+		String result = "";
+		try {
+			result = mapper.writeValueAsString(rservice.getBookListByGenreWithClassList(genreCode, classCode, page));
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("SYTEST: " + result);
+		return result;
 	}
 
 }

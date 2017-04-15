@@ -1,21 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-<script>
-	function clickGenre(genrecode) {
-		console.log("Asdf");
-		/* 
-		 $.ajax({
-			 type: "GET",
-			 url: "/bcg/sortByCondition",
-			 data: sum,
-			 success: function(result){
-	           $("#result").html(result);
-	       }}); */
-	}
-</script>
-
 <div class="container">
 	<div class="page-header">
 		<h1>카테고리별 추천</h1>
@@ -37,8 +22,8 @@
 		<c:forEach items="${classList }" var="category">
 			<div class="btn-group">
 				<button type="button" class="btn btn-primary" id="classBtn"
-					value="${category.classCode }"
-					onclick="javascript:clickClass('${category.classCode }');">${category.className }</button>
+					value="${category.key }"
+					onclick="javascript:clickClass('${category.key }');">${category.value }</button>
 			</div>
 		</c:forEach>
 	</div>

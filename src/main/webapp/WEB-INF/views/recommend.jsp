@@ -73,7 +73,7 @@ $(document).ready(function(){
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				document.getElementById("page").innerHTML = this.responseText;
-				eval(document.getElementById("page").innerHTML);
+				/* eval("function clickGenre(genrecode) {document.getElementById(\"selectedClass\").innerHTML = \"ajdsfkakldjfkladsklajfsd\";}"); */
 			}
 		};
 		xhttp.open("GET", "/bcg/recommendAll", true);
@@ -81,35 +81,24 @@ $(document).ready(function(){
 	}
 
 	function loadPageNamedCategory() {
-		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				document.getElementById("page").innerHTML = this.responseText;
-				eval(document.getElementById("page").innerHTML);
+		$.ajax({
+			type : "GET",
+			url : "/bcg/recommendByCategory.js",
+			dataType: "script",
+			success : function(response) {
+				$.ajax({
+					type : "GET",
+					url : "/bcg/recommendByCategory",
+					success : function(response) {
+						document.getElementById("page").innerHTML = response;
+					}
+				});
 			}
-		};
-		xhttp.open("GET", "/bcg/recommendByCategory", true);
-		xhttp.send();
+		});
 	}
-	
+
 	var sum = 0;
-	
-	function check() {
-		var g = document.getElementById("selectedGenre").val;
-		var c = document.getElementById("selectedClass").val;
-		sum = g+c;
-	}
-	
-	function clickClass(classcode) {
-		document.getElementById("selectedClass").innerHTML = classcode;
-	}
-	
-	function reset() {
-		document.getElementById("selectedGenre").innerHTML = "";
-		document.getElementById("selectedClass").innerHTML = "";
-	}
-	
-	
+
 </script>
 
 

@@ -19,14 +19,23 @@
 	<select id="selectGenre" resultType="bcg.common.entity.Genre">
 		select genrename, genrecode from genre
 	</select>
-
-	<select id="selectClass" resultType="bcg.common.entity.Class">
-		select classname, classcode from class
-	</select>
 	
 	<select id= "orderbyTotalScore" resultType="bcg.common.entity.CompareBook">
 		select bookcode, title, totalscore, imgurl from bookinfo
 		order by totalscore desc
 	</select>
-
+	
+	<select id= "selectBookListByGenreWithClass" parameterType="hashmap" resultType="bcg.common.entity.BookInfo" >
+		select bookcode, genrecode, title, imgurl, wordcloud, graph, totalscore, satisfactionscore, impressionscore, legibilityscore, compositionscore, authorscore, designscore, usefulnessscore, ROWNUM
+		from bookinfo
+		<![CDATA[
+		where ROWNUM >= ( #{page} * 10 + 1 ) and ROWNUM < ( ( #{page} + 1 ) * 10 + 1 )
+		]]>
+		<if test="genrecode != null">
+			and genrecode = #{genrecode}
+		</if>
+		<if test="classcode != null">
+			order by ${classcode} desc
+		</if>
+	</select>
 </mapper>

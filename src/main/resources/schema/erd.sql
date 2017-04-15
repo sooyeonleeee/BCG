@@ -1,9 +1,7 @@
 
 /* Drop Tables */
 
-DROP TABLE review CASCADE CONSTRAINTS;
 DROP TABLE bookinfo CASCADE CONSTRAINTS;
-DROP TABLE class CASCADE CONSTRAINTS;
 DROP TABLE genre CASCADE CONSTRAINTS;
 
 
@@ -17,18 +15,17 @@ CREATE TABLE bookinfo
 	genrecode number NOT NULL,
 	title varchar2(4000),
 	imgurl varchar2(4000),
-	totalscore number,
 	wordcloud varchar2(4000),
 	graph varchar2(4000),
+	totalscore number(10,4),
+	satisfactionscore number(10,4),
+	impressionscore number(10,4),
+	legibilityscore number(10,4),
+	compositionscore number(10,4),
+	authorscore number(10,4),
+	designscore number(10,4),
+	usefulnessscore number(10,4),
 	PRIMARY KEY (bookcode)
-);
-
-
-CREATE TABLE class
-(
-	classcode number NOT NULL,
-	classname varchar2(100) NOT NULL,
-	PRIMARY KEY (classcode)
 );
 
 
@@ -40,29 +37,8 @@ CREATE TABLE genre
 );
 
 
-CREATE TABLE review
-(
-	bookcode varchar2(100) NOT NULL,
-	classcode number NOT NULL,
-	classscore number NOT NULL,
-	UNIQUE (bookcode, classcode)
-);
-
-
 
 /* Create Foreign Keys */
-
-ALTER TABLE review
-	ADD FOREIGN KEY (bookcode)
-	REFERENCES bookinfo (bookcode)
-;
-
-
-ALTER TABLE review
-	ADD FOREIGN KEY (classcode)
-	REFERENCES class (classcode)
-;
-
 
 ALTER TABLE bookinfo
 	ADD FOREIGN KEY (genrecode)

@@ -1,13 +1,14 @@
 package bcg.common.entity;
 
 import java.util.Date;
-import java.util.HashMap;
 
-public class BookInfo {
+public class BookInfo implements java.io.Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	// DB에서 불러올 부분
 	private String bookCode;
 	private String title;
-	private int totalScore;
+	private Double totalScore;
 	private String imgurl;
 	private int genreCode;
 	private String wordCloud;
@@ -18,8 +19,18 @@ public class BookInfo {
 	private String description;
 	private int price;
 	private Date pubdate;
+	
+	private Double satisfactionScore;
+	private Double impressionScore;
+	private Double legibilityScore;
+	private Double compositionScore;
+	private Double authorScore;
+	private Double designScore;
+	private Double usefulnessScore;
 	// wordcloud와 graph는 resource에 저장해 놓고 불러오기(wordcloud_xxx, graph_xxx)
 	// mapkey: classcode, mapvalue: classscore
+	
+	
 
 	public BookInfo() {
 	}
@@ -40,11 +51,11 @@ public class BookInfo {
 		this.title = title;
 	}
 
-	public int getTotalScore() {
+	public Double getTotalScore() {
 		return totalScore;
 	}
 
-	public void setTotalScore(int totalScore) {
+	public void setTotalScore(Double totalScore) {
 		this.totalScore = totalScore;
 	}
 
@@ -120,14 +131,70 @@ public class BookInfo {
 		this.pubdate = pubdate;
 	}
 
+	public Double getSatisfactionScore() {
+		return satisfactionScore;
+	}
+
+	public void setSatisfactionScore(Double satisfactionScore) {
+		this.satisfactionScore = satisfactionScore;
+	}
+
+	public Double getImpressionScore() {
+		return impressionScore;
+	}
+
+	public void setImpressionScore(Double impressionScore) {
+		this.impressionScore = impressionScore;
+	}
+
+	public Double getLegibilityScore() {
+		return legibilityScore;
+	}
+
+	public void setLegibilityScore(Double legibilityScore) {
+		this.legibilityScore = legibilityScore;
+	}
+
+	public Double getCompositionScore() {
+		return compositionScore;
+	}
+
+	public void setCompositionScore(Double compositionScore) {
+		this.compositionScore = compositionScore;
+	}
+
+	public Double getAuthorScore() {
+		return authorScore;
+	}
+
+	public void setAuthorScore(Double authorScore) {
+		this.authorScore = authorScore;
+	}
+
+	public Double getDesignScore() {
+		return designScore;
+	}
+
+	public void setDesignScore(Double designScore) {
+		this.designScore = designScore;
+	}
+
+	public Double getUsefulnessScore() {
+		return usefulnessScore;
+	}
+
+	public void setUsefulnessScore(Double usefulnessScore) {
+		this.usefulnessScore = usefulnessScore;
+	}
+
 	@Override
 	public String toString() {
 		return "BookInfo [bookCode=" + bookCode + ", title=" + title + ", totalScore=" + totalScore + ", imgurl="
 				+ imgurl + ", genreCode=" + genreCode + ", wordCloud=" + wordCloud + ", graph=" + graph + ", author="
 				+ author + ", publisher=" + publisher + ", description=" + description + ", price=" + price
-				+ ", pubdate=" + pubdate + "]";
-	}
-
-	
-	
+				+ ", pubdate=" + pubdate + ", satisfactionScore=" + satisfactionScore + ", impressionScore="
+				+ impressionScore + ", legibilityScore=" + legibilityScore + ", compositionScore=" + compositionScore
+				+ ", authorScore=" + authorScore + ", designScore=" + designScore + ", usefulnessScore="
+				+ usefulnessScore + "]";
+	}	
 }

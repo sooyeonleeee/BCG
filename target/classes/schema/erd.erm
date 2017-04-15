@@ -135,7 +135,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2017-04-04 17:58:27</creation_date>
-			<updated_date>2017-04-14 18:19:10</updated_date>
+			<updated_date>2017-04-15 02:13:08</updated_date>
 			<model_property>
 				<name>프로젝트명</name>
 				<value></value>
@@ -170,6 +170,22 @@
 	<dictionary>
 		<word>
 			<id>0</id>
+			<length>null</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<zerofill>false</zerofill>
+			<binary>false</binary>
+			<args></args>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>authorscore</logical_name>
+			<physical_name>authorscore</physical_name>
+			<type>smallmoney</type>
+		</word>
+		<word>
+			<id>1</id>
 			<length>100</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -185,7 +201,7 @@
 			<type>varchar(n)</type>
 		</word>
 		<word>
-			<id>1</id>
+			<id>2</id>
 			<length>null</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -196,25 +212,9 @@
 			<args></args>
 			<char_semantics>false</char_semantics>
 			<description></description>
-			<logical_name>classcode</logical_name>
-			<physical_name>classcode</physical_name>
-			<type>decimal</type>
-		</word>
-		<word>
-			<id>2</id>
-			<length>100</length>
-			<decimal>null</decimal>
-			<array>false</array>
-			<array_dimension>null</array_dimension>
-			<unsigned>false</unsigned>
-			<zerofill>false</zerofill>
-			<binary>false</binary>
-			<args></args>
-			<char_semantics>false</char_semantics>
-			<description></description>
-			<logical_name>classname</logical_name>
-			<physical_name>classname</physical_name>
-			<type>varchar(n)</type>
+			<logical_name>compositionscore</logical_name>
+			<physical_name>compositionscore</physical_name>
+			<type>smallmoney</type>
 		</word>
 		<word>
 			<id>3</id>
@@ -228,9 +228,9 @@
 			<args></args>
 			<char_semantics>false</char_semantics>
 			<description></description>
-			<logical_name>classscore</logical_name>
-			<physical_name>classscore</physical_name>
-			<type>decimal</type>
+			<logical_name>designscore</logical_name>
+			<physical_name>designscore</physical_name>
+			<type>smallmoney</type>
 		</word>
 		<word>
 			<id>4</id>
@@ -298,6 +298,54 @@
 		</word>
 		<word>
 			<id>8</id>
+			<length>null</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<zerofill>false</zerofill>
+			<binary>false</binary>
+			<args></args>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>impressionscore</logical_name>
+			<physical_name>impressionscore</physical_name>
+			<type>smallmoney</type>
+		</word>
+		<word>
+			<id>9</id>
+			<length>null</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<zerofill>false</zerofill>
+			<binary>false</binary>
+			<args></args>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>legibilityscore</logical_name>
+			<physical_name>legibilityscore</physical_name>
+			<type>smallmoney</type>
+		</word>
+		<word>
+			<id>10</id>
+			<length>null</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<zerofill>false</zerofill>
+			<binary>false</binary>
+			<args></args>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>satisfactionscore</logical_name>
+			<physical_name>satisfactionscore</physical_name>
+			<type>smallmoney</type>
+		</word>
+		<word>
+			<id>11</id>
 			<length>4000</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -313,7 +361,7 @@
 			<type>varchar(n)</type>
 		</word>
 		<word>
-			<id>9</id>
+			<id>12</id>
 			<length>null</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -326,10 +374,26 @@
 			<description></description>
 			<logical_name>totalscore</logical_name>
 			<physical_name>totalscore</physical_name>
-			<type>decimal</type>
+			<type>smallmoney</type>
 		</word>
 		<word>
-			<id>10</id>
+			<id>13</id>
+			<length>null</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<zerofill>false</zerofill>
+			<binary>false</binary>
+			<args></args>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>usefulnessscore</logical_name>
+			<physical_name>usefulnessscore</physical_name>
+			<type>smallmoney</type>
+		</word>
+		<word>
+			<id>14</id>
 			<length>4000</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -351,11 +415,11 @@
 		<table>
 			<id>0</id>
 			<height>86</height>
-			<width>277</width>
+			<width>226</width>
 				<font_name>맑은 고딕</font_name>
 				<font_size>9</font_size>
 			<x>72</x>
-			<y>287</y>
+			<y>36</y>
 			<color>
 				<r>128</r>
 				<g>128</g>
@@ -363,15 +427,15 @@
 			</color>
 			<connections>
 			</connections>
-			<physical_name>class</physical_name>
-			<logical_name>카테고리</logical_name>
+			<physical_name>genre</physical_name>
+			<logical_name>책장르</logical_name>
 			<description></description>
 			<constraint></constraint>
 			<primary_key_name></primary_key_name>
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>1</word_id>
+					<word_id>4</word_id>
 					<id>0</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -404,7 +468,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>2</word_id>
+					<word_id>5</word_id>
 					<id>1</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -447,291 +511,6 @@
 		</table>
 		<table>
 			<id>1</id>
-			<height>86</height>
-			<width>226</width>
-				<font_name>맑은 고딕</font_name>
-				<font_size>9</font_size>
-			<x>72</x>
-			<y>36</y>
-			<color>
-				<r>128</r>
-				<g>128</g>
-				<b>192</b>
-			</color>
-			<connections>
-			</connections>
-			<physical_name>genre</physical_name>
-			<logical_name>책장르</logical_name>
-			<description></description>
-			<constraint></constraint>
-			<primary_key_name></primary_key_name>
-			<option></option>
-			<columns>
-				<normal_column>
-					<word_id>4</word_id>
-					<id>2</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>decimal</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>true</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>5</word_id>
-					<id>3</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>varchar(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-			</columns>
-			<indexes>
-			</indexes>
-			<complex_unique_key_list>
-			</complex_unique_key_list>
-			<table_properties>
-				<schema></schema>
-			</table_properties>
-		</table>
-		<table>
-			<id>2</id>
-			<height>107</height>
-			<width>223</width>
-				<font_name>맑은 고딕</font_name>
-				<font_size>9</font_size>
-			<x>408</x>
-			<y>276</y>
-			<color>
-				<r>128</r>
-				<g>128</g>
-				<b>192</b>
-			</color>
-			<connections>
-				<relation>
-					<id>0</id>
-					<source>3</source>
-					<target>2</target>
-						<source_xp>-1</source_xp>
-						<source_yp>-1</source_yp>
-						<target_xp>-1</target_xp>
-						<target_yp>-1</target_yp>
-						<color>
-							<r>0</r>
-							<g>0</g>
-							<b>0</b>
-						</color>
-					<child_cardinality>1..n</child_cardinality>
-					<parent_cardinality>1</parent_cardinality>
-					<reference_for_pk>true</reference_for_pk>
-					<name></name>
-					<on_delete_action>RESTRICT</on_delete_action>
-					<on_update_action>RESTRICT</on_update_action>
-					<referenced_column>null</referenced_column>
-					<referenced_complex_unique_key>null</referenced_complex_unique_key>
-				</relation>
-				<relation>
-					<id>1</id>
-					<source>0</source>
-					<target>2</target>
-						<source_xp>-1</source_xp>
-						<source_yp>-1</source_yp>
-						<target_xp>-1</target_xp>
-						<target_yp>-1</target_yp>
-						<color>
-							<r>0</r>
-							<g>0</g>
-							<b>0</b>
-						</color>
-					<child_cardinality>1..n</child_cardinality>
-					<parent_cardinality>1</parent_cardinality>
-					<reference_for_pk>true</reference_for_pk>
-					<name></name>
-					<on_delete_action>RESTRICT</on_delete_action>
-					<on_update_action>RESTRICT</on_update_action>
-					<referenced_column>null</referenced_column>
-					<referenced_complex_unique_key>null</referenced_complex_unique_key>
-				</relation>
-			</connections>
-			<physical_name>review</physical_name>
-			<logical_name>책카테고리별리뷰점수</logical_name>
-			<description></description>
-			<constraint></constraint>
-			<primary_key_name></primary_key_name>
-			<option></option>
-			<columns>
-				<normal_column>
-					<id>4</id>
-					<referenced_column>7</referenced_column>
-					<relation>0</relation>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>varchar(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>true</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<id>5</id>
-					<referenced_column>0</referenced_column>
-					<relation>1</relation>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>decimal</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>true</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>3</word_id>
-					<id>6</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>decimal</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-			</columns>
-			<indexes>
-			</indexes>
-			<complex_unique_key_list>
-				<complex_unique_key>
-					<id>0</id>
-					<name></name>
-					<columns>
-						<column>
-							<id>4</id>
-						</column>
-						<column>
-							<id>5</id>
-						</column>
-					</columns>
-				</complex_unique_key>
-			</complex_unique_key_list>
-			<table_properties>
-				<schema></schema>
-			</table_properties>
-		</table>
-		<table>
-			<id>3</id>
 			<height>191</height>
 			<width>236</width>
 				<font_name>맑은 고딕</font_name>
@@ -745,9 +524,9 @@
 			</color>
 			<connections>
 				<relation>
-					<id>2</id>
-					<source>1</source>
-					<target>3</target>
+					<id>0</id>
+					<source>0</source>
+					<target>1</target>
 						<source_xp>-1</source_xp>
 						<source_yp>-1</source_yp>
 						<target_xp>-1</target_xp>
@@ -775,8 +554,8 @@
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>0</word_id>
-					<id>7</id>
+					<word_id>1</word_id>
+					<id>2</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -808,9 +587,9 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>8</id>
-					<referenced_column>2</referenced_column>
-					<relation>2</relation>
+					<id>3</id>
+					<referenced_column>0</referenced_column>
+					<relation>0</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -842,8 +621,8 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>8</word_id>
-					<id>9</id>
+					<word_id>11</word_id>
+					<id>4</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -876,7 +655,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>7</word_id>
-					<id>10</id>
+					<id>5</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -908,41 +687,8 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>9</word_id>
-					<id>11</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>decimal</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>false</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>10</word_id>
-					<id>12</id>
+					<word_id>14</word_id>
+					<id>6</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -975,12 +721,276 @@
 				</normal_column>
 				<normal_column>
 					<word_id>6</word_id>
-					<id>13</id>
+					<id>7</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
 					<physical_name></physical_name>
 					<type>varchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>12</word_id>
+					<id>8</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>smallmoney</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>10</word_id>
+					<id>9</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>smallmoney</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>8</word_id>
+					<id>10</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>smallmoney</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>9</word_id>
+					<id>11</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>smallmoney</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>2</word_id>
+					<id>12</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>smallmoney</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>0</word_id>
+					<id>13</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>smallmoney</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>3</word_id>
+					<id>14</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>smallmoney</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>13</word_id>
+					<id>15</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>smallmoney</type>
 					<constraint></constraint>
 					<default_value></default_value>
 					<auto_increment>false</auto_increment>
@@ -1020,69 +1030,937 @@
 	</column_groups>
 	<test_data_list>
 			<test_data>
-				<name>testdata1</name>
+				<name>test2</name>
 				<export_order>0</export_order>
 				<table_test_data>
-					<table_id>3</table_id>
+					<table_id>1</table_id>
 					<direct_test_data>
 						<data>
 							<column_data>
+								<column_id>2</column_id>
+								<value>111111</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>1</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>a</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
 								<column_id>7</column_id>
-								<value>a001</value>
+								<value></value>
 							</column_data>
 							<column_data>
 								<column_id>8</column_id>
-								<value></value>
+								<value>123</value>
 							</column_data>
 							<column_data>
 								<column_id>9</column_id>
-								<value>나미야 잡화점의 기적</value>
+								<value>11</value>
 							</column_data>
 							<column_data>
 								<column_id>10</column_id>
-								<value>http://image.yes24.com/momo/TopCate223/MidCate010/22291619(1).jpghttp://image.yes24.com/momo/TopCate223/MidCate010/22291619(1).jpg</value>
+								<value>31</value>
 							</column_data>
 							<column_data>
 								<column_id>11</column_id>
-								<value></value>
+								<value>41</value>
 							</column_data>
 							<column_data>
 								<column_id>12</column_id>
-								<value></value>
+								<value>51</value>
 							</column_data>
 							<column_data>
 								<column_id>13</column_id>
-								<value></value>
+								<value>61</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>71</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>81</value>
 							</column_data>
 						</data>
 						<data>
 							<column_data>
+								<column_id>2</column_id>
+								<value>111112</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>2</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>b</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
 								<column_id>7</column_id>
-								<value>a002</value>
+								<value></value>
 							</column_data>
 							<column_data>
 								<column_id>8</column_id>
-								<value></value>
+								<value>124</value>
 							</column_data>
 							<column_data>
 								<column_id>9</column_id>
-								<value>자존감 수</value>
+								<value>12</value>
 							</column_data>
 							<column_data>
 								<column_id>10</column_id>
-								<value>http://image.yes24.com/momo/TopCate963/MidCate003/96229066.jpghttp://image.yes24.com/momo/TopCate963/MidCate003/96229066.jpg</value>
+								<value>32</value>
 							</column_data>
 							<column_data>
 								<column_id>11</column_id>
-								<value></value>
+								<value>42</value>
 							</column_data>
 							<column_data>
 								<column_id>12</column_id>
-								<value></value>
+								<value>52</value>
 							</column_data>
 							<column_data>
 								<column_id>13</column_id>
+								<value>62</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>72</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>82</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112112</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>3</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>c</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
 								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>125</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>13</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>33</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>43</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>53</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>63</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>73</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>83</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112113</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>4</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>d</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>126</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>14</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>34</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>44</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>54</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>64</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>74</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>84</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112114</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>5</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>e</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>127</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>15</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>35</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>45</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>55</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>65</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>75</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>85</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112115</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>6</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>f</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>128</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>16</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>36</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>46</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>56</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>66</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>76</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>86</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112116</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>7</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>g</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>129</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>17</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>37</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>47</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>57</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>67</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>77</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>87</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112117</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>8</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>h</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>130</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>18</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>38</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>48</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>58</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>68</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>78</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>88</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112118</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>1</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>i</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>131</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>19</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>39</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>49</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>59</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>69</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>79</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>89</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>121231</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>2</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>j</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>132</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>20</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>40</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>50</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>60</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>70</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>80</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>90</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112120</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>3</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>k</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>133</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>21</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>41</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>51</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>61</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>71</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>81</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>91</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112121</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>4</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>l</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>134</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>22</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>42</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>52</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>62</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>72</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>82</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>92</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112122</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>5</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>m</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>135</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>23</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>43</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>53</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>63</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>73</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>83</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>93</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112123</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>6</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>n</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>136</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>24</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>44</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>54</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>64</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>74</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>84</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>94</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112124</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>7</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>o</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>137</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>25</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>45</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>55</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>65</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>75</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>85</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>95</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>112125</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>8</value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>p</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://img.phinf.pholar.net/20160624_87/1466746329488NCcL0_JPEG/p?type=w1080_jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>138</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>26</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>46</value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>56</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>66</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>76</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>86</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>96</value>
 							</column_data>
 						</data>
 					</direct_test_data>
@@ -1090,37 +1968,37 @@
 						<test_data_num>0</test_data_num>
 						<data_def_list>
 							<data_def>
-								<column_id>7</column_id>
+								<column_id>2</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
-								<template>bookcode_%</template>
+								<template>isbn_%</template>
 								<from>1</from>
 								<to>100</to>
 								<increment>1</increment>
-								<select>bookcode_1</select>
-								<select>bookcode_2</select>
-								<select>bookcode_3</select>
-								<select>bookcode_4</select>
+								<select>isbn_1</select>
+								<select>isbn_2</select>
+								<select>isbn_3</select>
+								<select>isbn_4</select>
 								<modified_values>
 								</modified_values>
 							</data_def>
 							<data_def>
-								<column_id>8</column_id>
+								<column_id>3</column_id>
 								<type>foreign.key</type>
 								<repeat_num>1</repeat_num>
-								<template>genrecode_%</template>
+								<template>%</template>
 								<from>1</from>
 								<to>100</to>
 								<increment>1</increment>
-								<select>genrecode_1</select>
-								<select>genrecode_2</select>
-								<select>genrecode_3</select>
-								<select>genrecode_4</select>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
 								<modified_values>
 								</modified_values>
 							</data_def>
 							<data_def>
-								<column_id>9</column_id>
+								<column_id>4</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
 								<template>title_%</template>
@@ -1135,7 +2013,7 @@
 								</modified_values>
 							</data_def>
 							<data_def>
-								<column_id>10</column_id>
+								<column_id>5</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
 								<template>imgurl_%</template>
@@ -1146,6 +2024,81 @@
 								<select>imgurl_2</select>
 								<select>imgurl_3</select>
 								<select>imgurl_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>6</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>wordcloud_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>wordcloud_1</select>
+								<select>wordcloud_2</select>
+								<select>wordcloud_3</select>
+								<select>wordcloud_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>7</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>graph_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>graph_1</select>
+								<select>graph_2</select>
+								<select>graph_3</select>
+								<select>graph_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>8</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>9</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>10</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
 								<modified_values>
 								</modified_values>
 							</data_def>
@@ -1168,14 +2121,14 @@
 								<column_id>12</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
-								<template>wordcloud_%</template>
+								<template>%</template>
 								<from>1</from>
 								<to>100</to>
 								<increment>1</increment>
-								<select>wordcloud_1</select>
-								<select>wordcloud_2</select>
-								<select>wordcloud_3</select>
-								<select>wordcloud_4</select>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
 								<modified_values>
 								</modified_values>
 							</data_def>
@@ -1183,255 +2136,34 @@
 								<column_id>13</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
-								<template>graph_%</template>
+								<template>%</template>
 								<from>1</from>
 								<to>100</to>
 								<increment>1</increment>
-								<select>graph_1</select>
-								<select>graph_2</select>
-								<select>graph_3</select>
-								<select>graph_4</select>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
 								<modified_values>
 								</modified_values>
 							</data_def>
-						</data_def_list>
-					</repeat_test_data>
-				</table_test_data>
-				<table_test_data>
-					<table_id>2</table_id>
-					<direct_test_data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a001</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class1</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>10</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a001</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class2</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>20</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a001</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class3</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>30</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a001</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class4</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>40</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a001</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class5</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>50</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a001</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class6</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>60</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a001</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class7</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>70</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a002</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class1</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>20</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a002</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class2</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>30</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a002</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class3</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>40</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a002</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class4</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>50</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a002</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class5</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>60</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a002</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class6</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>70</value>
-							</column_data>
-						</data>
-						<data>
-							<column_data>
-								<column_id>4</column_id>
-								<value>a002</value>
-							</column_data>
-							<column_data>
-								<column_id>5</column_id>
-								<value>class7</value>
-							</column_data>
-							<column_data>
-								<column_id>6</column_id>
-								<value>80</value>
-							</column_data>
-						</data>
-					</direct_test_data>
-					<repeat_test_data>
-						<test_data_num>0</test_data_num>
-						<data_def_list>
 							<data_def>
-								<column_id>4</column_id>
-								<type>foreign.key</type>
+								<column_id>14</column_id>
+								<type>format</type>
 								<repeat_num>1</repeat_num>
-								<template>bookcode_%</template>
+								<template>%</template>
 								<from>1</from>
 								<to>100</to>
 								<increment>1</increment>
-								<select>bookcode_1</select>
-								<select>bookcode_2</select>
-								<select>bookcode_3</select>
-								<select>bookcode_4</select>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
 								<modified_values>
 								</modified_values>
 							</data_def>
 							<data_def>
-								<column_id>5</column_id>
-								<type>foreign.key</type>
-								<repeat_num>1</repeat_num>
-								<template>classcode_%</template>
-								<from>1</from>
-								<to>100</to>
-								<increment>1</increment>
-								<select>classcode_1</select>
-								<select>classcode_2</select>
-								<select>classcode_3</select>
-								<select>classcode_4</select>
-								<modified_values>
-								</modified_values>
-							</data_def>
-							<data_def>
-								<column_id>6</column_id>
+								<column_id>15</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
 								<template>%</template>
@@ -1454,71 +2186,81 @@
 						<data>
 							<column_data>
 								<column_id>0</column_id>
-								<value>class1</value>
+								<value>1</value>
 							</column_data>
 							<column_data>
 								<column_id>1</column_id>
-								<value>만족도</value>
+								<value>소설</value>
 							</column_data>
 						</data>
 						<data>
 							<column_data>
 								<column_id>0</column_id>
-								<value>class2</value>
+								<value>2</value>
 							</column_data>
 							<column_data>
 								<column_id>1</column_id>
-								<value>느낌</value>
+								<value>시에세이</value>
 							</column_data>
 						</data>
 						<data>
 							<column_data>
 								<column_id>0</column_id>
-								<value>class3</value>
+								<value>3</value>
 							</column_data>
 							<column_data>
 								<column_id>1</column_id>
-								<value>가독성</value>
+								<value>경제경영</value>
 							</column_data>
 						</data>
 						<data>
 							<column_data>
 								<column_id>0</column_id>
-								<value>class4</value>
+								<value>4</value>
 							</column_data>
 							<column_data>
 								<column_id>1</column_id>
-								<value>구성</value>
+								<value>자기계발</value>
 							</column_data>
 						</data>
 						<data>
 							<column_data>
 								<column_id>0</column_id>
-								<value>class5</value>
+								<value>5</value>
 							</column_data>
 							<column_data>
 								<column_id>1</column_id>
-								<value>작가</value>
+								<value>사회과학</value>
 							</column_data>
 						</data>
 						<data>
 							<column_data>
 								<column_id>0</column_id>
-								<value>class6</value>
+								<value>6</value>
 							</column_data>
 							<column_data>
 								<column_id>1</column_id>
-								<value>표지디자인</value>
+								<value>역사문화</value>
 							</column_data>
 						</data>
 						<data>
 							<column_data>
 								<column_id>0</column_id>
-								<value>class7</value>
+								<value>7</value>
 							</column_data>
 							<column_data>
 								<column_id>1</column_id>
-								<value>유익성</value>
+								<value>인문예술</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>0</column_id>
+								<value>8</value>
+							</column_data>
+							<column_data>
+								<column_id>1</column_id>
+								<value>자연과학</value>
 							</column_data>
 						</data>
 					</direct_test_data>
@@ -1529,14 +2271,14 @@
 								<column_id>0</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
-								<template>classcode_%</template>
+								<template>%</template>
 								<from>1</from>
 								<to>100</to>
 								<increment>1</increment>
-								<select>classcode_1</select>
-								<select>classcode_2</select>
-								<select>classcode_3</select>
-								<select>classcode_4</select>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
 								<modified_values>
 								</modified_values>
 							</data_def>
@@ -1544,14 +2286,354 @@
 								<column_id>1</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
-								<template>classname_%</template>
+								<template>genrename_%</template>
 								<from>1</from>
 								<to>100</to>
 								<increment>1</increment>
-								<select>classname_1</select>
-								<select>classname_2</select>
-								<select>classname_3</select>
-								<select>classname_4</select>
+								<select>genrename_1</select>
+								<select>genrename_2</select>
+								<select>genrename_3</select>
+								<select>genrename_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+						</data_def_list>
+					</repeat_test_data>
+				</table_test_data>
+			</test_data>
+			<test_data>
+				<name>testdata1</name>
+				<export_order>0</export_order>
+				<table_test_data>
+					<table_id>1</table_id>
+					<direct_test_data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>a001</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>나미야 잡화점의 기적</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://image.yes24.com/momo/TopCate223/MidCate010/22291619(1).jpghttp://image.yes24.com/momo/TopCate223/MidCate010/22291619(1).jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value></value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>a002</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>자존감 수</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>http://image.yes24.com/momo/TopCate963/MidCate003/96229066.jpghttp://image.yes24.com/momo/TopCate963/MidCate003/96229066.jpg</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>11</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value></value>
+							</column_data>
+						</data>
+					</direct_test_data>
+					<repeat_test_data>
+						<test_data_num>0</test_data_num>
+						<data_def_list>
+							<data_def>
+								<column_id>2</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>bookcode_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>bookcode_1</select>
+								<select>bookcode_2</select>
+								<select>bookcode_3</select>
+								<select>bookcode_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>3</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>genrecode_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>genrecode_1</select>
+								<select>genrecode_2</select>
+								<select>genrecode_3</select>
+								<select>genrecode_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>4</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>title_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>title_1</select>
+								<select>title_2</select>
+								<select>title_3</select>
+								<select>title_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>5</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>imgurl_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>imgurl_1</select>
+								<select>imgurl_2</select>
+								<select>imgurl_3</select>
+								<select>imgurl_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>6</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>wordcloud_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>wordcloud_1</select>
+								<select>wordcloud_2</select>
+								<select>wordcloud_3</select>
+								<select>wordcloud_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>7</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>graph_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>graph_1</select>
+								<select>graph_2</select>
+								<select>graph_3</select>
+								<select>graph_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>8</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>9</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>10</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>11</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>12</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>13</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>14</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>15</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
 								<modified_values>
 								</modified_values>
 							</data_def>
@@ -1559,25 +2641,25 @@
 					</repeat_test_data>
 				</table_test_data>
 				<table_test_data>
-					<table_id>1</table_id>
+					<table_id>0</table_id>
 					<direct_test_data>
 						<data>
 							<column_data>
-								<column_id>2</column_id>
+								<column_id>0</column_id>
 								<value>001</value>
 							</column_data>
 							<column_data>
-								<column_id>3</column_id>
+								<column_id>1</column_id>
 								<value>소설</value>
 							</column_data>
 						</data>
 						<data>
 							<column_data>
-								<column_id>2</column_id>
+								<column_id>0</column_id>
 								<value>004</value>
 							</column_data>
 							<column_data>
-								<column_id>3</column_id>
+								<column_id>1</column_id>
 								<value>자기계발</value>
 							</column_data>
 						</data>
@@ -1586,7 +2668,7 @@
 						<test_data_num>0</test_data_num>
 						<data_def_list>
 							<data_def>
-								<column_id>2</column_id>
+								<column_id>0</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
 								<template>genrecode_%</template>
@@ -1601,7 +2683,7 @@
 								</modified_values>
 							</data_def>
 							<data_def>
-								<column_id>3</column_id>
+								<column_id>1</column_id>
 								<type>format</type>
 								<repeat_num>1</repeat_num>
 								<template>genrename_%</template>
