@@ -7,16 +7,17 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class RedisDAOImpl implements RedisDAO {
 	@Autowired
-	private RedisTemplate redisSesseion;
+	private RedisTemplate<String, Object> redisSesseion;
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public Object getObject(String key) {
-		return redisSesseion.opsForValue().get(key);
+	public <T> T getObject(String key, Class<T> valueType) {
+		return (T)redisSesseion.opsForValue().get(key);
 	}
 
 	@Override
-	public void setObject(String key, Object value) {
-		redisSesseion.opsForValue().set(key, value);
+	public <T> void setObject(String key, T value) {
+		redisSesseion.opsForValue().set(key, value, 10, java.util.concurrent.TimeUnit.MINUTES);
 	}
 
 }

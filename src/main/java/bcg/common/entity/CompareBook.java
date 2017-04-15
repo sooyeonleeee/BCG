@@ -1,6 +1,8 @@
 package bcg.common.entity;
 
-public class CompareBook {
+public class CompareBook implements java.io.Serializable {
+	private static final long serialVersionUID = 1L;
+
 	private String bookCode;
 	private String title;
 	private String imgurl;

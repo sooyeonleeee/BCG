@@ -1,6 +1,6 @@
 package bcg.common.dao;
 
 public interface RedisDAO {
-	public Object getObject(String key);
-	public void setObject(String key, Object value);
+	public <T> T getObject(String key, Class<T> valueType);
+	public <T> void setObject(String key, T value);
 }

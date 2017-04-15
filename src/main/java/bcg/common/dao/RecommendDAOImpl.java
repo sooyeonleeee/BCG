@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import bcg.common.entity.BookInfo;
-import bcg.common.entity.Class;
 import bcg.common.entity.CompareBook;
 import bcg.common.entity.Genre;
 
@@ -27,24 +26,35 @@ public class RecommendDAOImpl implements RecommendDAO {
 	@Override
 	public List<Genre> getGenreList() {
 		String stmt = namespace + "selectGenre";
-		List<Genre> genreList = sqlSession.selectList(stmt);
-		return genreList;
-	}
+		
+		String redisQuery = stmt;
+		@SuppressWarnings("unchecked")
+		List<Genre> result = redisDAO.getObject(redisQuery, List.class);
+		
+		if(result == null) {
+			result = sqlSession.selectList(stmt);
+			redisDAO.setObject(redisQuery, result);
+		}
 
-	@Override
-	public List<Class> getClassList() {
-		String stmt = namespace + "selectClass";
-		List<Class> classList = sqlSession.selectList(stmt);
-		return classList;
+		return result;
 	}
 
 	@Override
 	public List<CompareBook> getSortedBookList() {
 		String stmt = namespace + "orderbyTotalScore";
-		List<CompareBook> bookList = sqlSession.selectList(stmt);
-		return bookList;
-	}
+		
+		String redisQuery = stmt;
+		@SuppressWarnings("unchecked")
+		List<CompareBook> result = redisDAO.getObject(redisQuery, List.class);
+		
+		if(result == null) {
+			result = sqlSession.selectList(stmt);
+			redisDAO.setObject(redisQuery, result);
+		}
 
+		return result;
+	}
+	
 	@Override
 	public List<BookInfo> getBookListByGenreWithClassList(String genreCode, String classCode, Integer page) {
 		String stmt = namespace + "selectBookListByGenreWithClass";
@@ -53,20 +63,15 @@ public class RecommendDAOImpl implements RecommendDAO {
 		param.put("classcode", classCode);
 		param.put("page", page);
 		
-		String redisQuery = stmt+":" + genreCode + ":" + classCode + ":" + page;
-		Object redisResult = redisDAO.getObject(redisQuery);
-		
-		List<BookInfo> result = null;
-		
-		if(redisResult == null) {
+		String redisQuery = stmt + ":" + genreCode + ":" + classCode + ":" + page;
+		@SuppressWarnings("unchecked")
+		List<BookInfo> result = redisDAO.getObject(redisQuery, List.class);
+
+		if(result == null) {
 			result = sqlSession.selectList(stmt, param);
 			redisDAO.setObject(redisQuery, result);
-			System.out.println("unsaved");
-		} else {
-			result = (List<BookInfo>)redisResult;
-			System.out.println("saved");
 		}
-		
+
 		return result;
 	}
 

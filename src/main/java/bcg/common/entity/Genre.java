@@ -1,6 +1,8 @@
 package bcg.common.entity;
 
-public class Genre {
+public class Genre implements java.io.Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private int genreCode;
 	private String genreName;
 
