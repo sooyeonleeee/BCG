@@ -8,15 +8,24 @@ function sleep(ms) {
 function getBookListFromServer() {
 	var selectedGenreCode = document.getElementById("selectedGenre").val;
 	var selectedClassCode = document.getElementById("selectedClass").val;
-	var urlPram = "genreCode=" + selectedGenreCode + "&classCode=" + selectedClassCode + "&page=" + currPageInfo;
-	console.log(urlPram);
+	var urlParam = "genreCode=" + selectedGenreCode + "&classCode=" + selectedClassCode + "&page=" + currPageInfo;
+	var books, size, i, result;
 	$.ajax({
 		type : "GET",
-		url : "/bcg/sortedbookinfo?" + urlPram,
+		url : "/bcg/sortedbookinfo?" + urlParam,
 		success : function(response) {
 			console.log(response);
+			books = JSON.parse(response);
+			size = books.length;
+			result="";
+			for(i=0;i < size;i++) {
+				result +=  books[i].title + "<br>"+ books[i].totalScore+"<br>"+books[i].imgurl+"<br>";
+			}
+			document.getElementById("result").innerHTML = result;
+			
 		}
 	});
+	
 }
 async function delayGetBookListFromServer(currTime) {
 	await sleep(3000);

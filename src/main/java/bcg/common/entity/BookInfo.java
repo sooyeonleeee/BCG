@@ -13,6 +13,7 @@ public class BookInfo implements java.io.Serializable {
 	private int genreCode;
 	private String wordCloud;
 	private String graph;
+	
 	// api에서 불러올 부분
 	private String author;
 	private String publisher;
