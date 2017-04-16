@@ -4,6 +4,8 @@ import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -95,12 +97,12 @@ public class PageController {
 		return mav;
 	}
 	
-	@RequestMapping("/sortedbookinfo")
+	@RequestMapping(value = "/sortedbookinfo", produces = "application/json; charset=utf-8")
 	@ResponseBody
-	public String getBookListByGenreWithClass(String genreCode, String classCode, Integer page) {
+	public String getBookListByGenreWithClass(HttpServletResponse response, String genreCode, String classCode, Integer page) {
 		ObjectMapper mapper = new ObjectMapper();
 		classCode = classCode.equals("undefined") || classCode == null ? "totalscore" : classCode;
-		genreCode = genreCode.equals("undefined") ? null : genreCode;
+		genreCode = genreCode.equals("undefix`ned") ? null : genreCode;
 		String result = "";
 		try {
 			result = mapper.writeValueAsString(rservice.getBookListByGenreWithClassList(genreCode, classCode, page));
@@ -109,6 +111,7 @@ public class PageController {
 			e.printStackTrace();
 		}
 		System.out.println("SYTEST: " + result);
+		
 		return result;
 	}
 

@@ -6,7 +6,10 @@
 	<select id="selectByTitle" parameterType="java.lang.String"
 		resultType="bcg.common.entity.CompareBook">
 		select bookcode, title, totalscore, imgurl from bookinfo
-		where title like '%'|| #{title} || '%'
+		<if test="title != null">
+			where title like '%'|| #{title} || '%'
+		</if>
+		order by totalscore desc
 	</select>
 
 
@@ -26,16 +29,20 @@
 	</select>
 	
 	<select id= "selectBookListByGenreWithClass" parameterType="hashmap" resultType="bcg.common.entity.BookInfo" >
-		select bookcode, genrecode, title, imgurl, wordcloud, graph, totalscore, satisfactionscore, impressionscore, legibilityscore, compositionscore, authorscore, designscore, usefulnessscore, ROWNUM
-		from bookinfo
-		<![CDATA[
-		where ROWNUM >= ( #{page} * 10 + 1 ) and ROWNUM < ( ( #{page} + 1 ) * 10 + 1 )
-		]]>
-		<if test="genrecode != null">
-			and genrecode = #{genrecode}
-		</if>
-		<if test="classcode != null">
-			order by ${classcode} desc
-		</if>
+		select bookcode, genrecode, title, imgurl, wordcloud, graph, totalscore, satisfactionscore, impressionscore, legibilityscore, compositionscore, authorscore, designscore, usefulnessscore, RNUM
+		from (
+			select bookcode, genrecode, title, imgurl, wordcloud, graph, totalscore, satisfactionscore, impressionscore, legibilityscore, compositionscore, authorscore, designscore, usefulnessscore, ROWNUM as RNUM
+			from bookinfo
+			<![CDATA[
+			where ROWNUM < ( ( #{page} + 1 ) * 10 + 1 )
+			]]>
+			<if test="genrecode != null">
+				and genrecode = #{genrecode}
+			</if>
+			<if test="classcode != null">
+				order by ${classcode} desc
+			</if>
+		)
+		where RNUM >= ( #{page} * 10 + 1 )
 	</select>
 </mapper>
