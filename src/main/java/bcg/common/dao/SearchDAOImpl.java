@@ -24,7 +24,7 @@ public class SearchDAOImpl implements SearchDAO {
 		// TODO Auto-generated method stub
 		String stmt = namespace + "selectByTitle";
 		
-		String redisQuery = stmt;
+		String redisQuery = stmt + ":" + title;
 		@SuppressWarnings("unchecked")
 		List<CompareBook> result = redisDAO.getObject(redisQuery, List.class);
 		
