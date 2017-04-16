@@ -1,6 +1,8 @@
 package bcg.common.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,9 @@ public class SearchDAOImpl implements SearchDAO {
 	public List<CompareBook> searchFromDB(String title) {
 		// TODO Auto-generated method stub
 		String stmt = namespace + "selectByTitle";
+		
+		Map<String, Object> param = new HashMap<String, Object>();
+		param.put("title", title);
 		
 		String redisQuery = stmt + ":" + title;
 		@SuppressWarnings("unchecked")
