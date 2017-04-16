@@ -17,9 +17,6 @@ function getBookListFromServer() {
 		success : function(response) {
 			console.log(response);
 			document.getElementById("info").innerHTML = response;
-				 
-			
-			
 		}
 	});
 	
