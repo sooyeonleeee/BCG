@@ -7,9 +7,15 @@
 		resultType="bcg.common.entity.CompareBook">
 		select bookcode, title, totalscore, imgurl from bookinfo
 		<if test="title != null">
-			where title like '%'|| #{title} || '%'
+			where title like '%' || #{title} || '%'
 		</if>
 		order by totalscore desc
+	</select>
+	
+	<select id="selectByIsbn" parameterType="java.lang.String"
+		resultType="bcg.common.entity.BookInfo">
+		select * from bookinfo
+		where bookcode = #{isbn}
 	</select>
 
 
