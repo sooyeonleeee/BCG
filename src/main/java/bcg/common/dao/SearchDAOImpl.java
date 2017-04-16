@@ -34,7 +34,7 @@ public class SearchDAOImpl implements SearchDAO {
 		List<CompareBook> result = redisDAO.getObject(redisQuery, List.class);
 		
 		if(result == null) {
-			result = sqlSession.selectList(stmt);
+			result = sqlSession.selectList(stmt, param);
 			redisDAO.setObject(redisQuery, result);
 		}
 

@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import bcg.common.entity.BookInfo;
 import bcg.common.entity.CompareBook;
 import bcg.common.service.RecommendServiceImpl;
 import bcg.common.service.SearchServiceImpl;
@@ -97,22 +98,18 @@ public class PageController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/sortedbookinfo", produces = "application/json; charset=utf-8")
-	@ResponseBody
-	public String getBookListByGenreWithClass(HttpServletResponse response, String genreCode, String classCode, Integer page) {
+	@RequestMapping(value = "/sortedbookinfo")
+	public ModelAndView getBookListByGenreWithClass(HttpServletResponse response, String genreCode, String classCode, Integer page) {
 		ObjectMapper mapper = new ObjectMapper();
 		classCode = classCode.equals("undefined") || classCode == null ? "totalscore" : classCode;
-		genreCode = genreCode.equals("undefix`ned") ? null : genreCode;
-		String result = "";
-		try {
-			result = mapper.writeValueAsString(rservice.getBookListByGenreWithClassList(genreCode, classCode, page));
-		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("SYTEST: " + result);
+		genreCode = genreCode.equals("undefined") ? null : genreCode;
 		
-		return result;
+		List<BookInfo> result = rservice.getBookListByGenreWithClassList(genreCode, classCode, page);
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("result", result);
+		mav.setViewName("sortedbookinfo");
+		
+		return mav;
 	}
 
 }
