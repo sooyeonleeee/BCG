@@ -31,35 +31,9 @@
 		</c:forEach>
 	</div>
 
-<!-- 여기부터 수정함(원래 result div만 있던 곳) -->
-	<div class="container-fluid" id="info">
-		<div class="row">
-				<div class="media">
-					<div class="media-left">
-							
-							<button type="button" id ="btnimg" style="width:150px; h" class="btn btn-info btn-lg media-object" onclick="location.href='#'">
-								<!-- <img src="" class="media-object" style="width: 150px" id="btnimg"> -->
-								
-							</button>
-					</div>
-					
 
-					<div class="media-body">
-						<p align="justify">
-						<h4 class="media-heading" id="booktitle"></h4> 
-						<br>
-						
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="70"
-								aria-valuemin="0" aria-valuemax="100" id="scorebar"></div> 
-						</div>
-					
-					</div>
-				
-				
-				</div>
-		</div>
-	</div>
+	
+	<div class="container-fluid" id="info"></div>
 </div>
 
 

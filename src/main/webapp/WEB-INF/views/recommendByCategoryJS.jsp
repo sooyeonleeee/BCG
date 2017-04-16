@@ -11,22 +11,14 @@ function getBookListFromServer() {
 	var selectedGenreCode = document.getElementById("selectedGenre").val;
 	var selectedClassCode = document.getElementById("selectedClass").val;
 	var urlParam = "genreCode=" + selectedGenreCode + "&classCode=" + selectedClassCode + "&page=" + currPageInfo;
-	var books, size, i;
 	$.ajax({
 		type : "GET",
 		url : "/bcg/sortedbookinfo?" + urlParam,
 		success : function(response) {
 			console.log(response);
-			books = response;
-			size = books.length;
-			console.log(size);
-			for(i=0;i < size;i++) {
-				 document.getElementById("info").style.visibility ="visible";
-				  document.getElementById("booktitle").innerHTML += books[i].title;
-				  document.getElementById("scorebar").style.width="books[i].totalScore";
-				   document.getElementById("scorebar").innerHTML = books[i].totalScore+"%";
-				document.getElementById("btnimg").style.backgroundImage = "url(\'" + books[i].imgurl + "\')";
-			}
+			document.getElementById("info").innerHTML = response;
+				 
+			
 			
 		}
 	});
