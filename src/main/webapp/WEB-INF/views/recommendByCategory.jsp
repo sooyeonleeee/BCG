@@ -28,9 +28,34 @@
 		</c:forEach>
 	</div>
 
-	<div id="result"></div>
+<!-- 여기부터 수정함(원래 result div만 있던 곳) -->
+	<div class="container-fluid">
+		<div class="row">
+				<div class="media">
+					<div class="media-left">
+							<div id="btnimg">
+							<%-- <button type="button" class="btn btn-info btn-lg" onclick="location.href='#'">
+								<img src="${book.imgurl }" class="media-object" style="width: 150px">
+								
+							</button> --%>
+							</div>
+					</div>
 
-
+					<div class="media-body">
+						<p align="justify">
+						<h4 class="media-heading" id="booktitle"></h4> 
+						<br>
+						<div class="progress" id="score">
+							<%-- <div class="progress-bar" role="progressbar" aria-valuenow="70"
+								aria-valuemin="0" aria-valuemax="100"
+								style="width:${book.totalScore}%">${book.totalScore}%</div> --%>
+						</div>
+					</div>
+				
+				
+				</div>
+		</div>
+	</div>
 </div>
 
 

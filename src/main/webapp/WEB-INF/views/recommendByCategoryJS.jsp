@@ -9,7 +9,7 @@ function getBookListFromServer() {
 	var selectedGenreCode = document.getElementById("selectedGenre").val;
 	var selectedClassCode = document.getElementById("selectedClass").val;
 	var urlParam = "genreCode=" + selectedGenreCode + "&classCode=" + selectedClassCode + "&page=" + currPageInfo;
-	var books, size, i, result;
+	var books, size, i;
 	$.ajax({
 		type : "GET",
 		url : "/bcg/sortedbookinfo?" + urlParam,
@@ -18,10 +18,12 @@ function getBookListFromServer() {
 			books = JSON.parse(response);
 			size = books.length;
 			result="";
+			
 			for(i=0;i < size;i++) {
-				result +=  books[i].title + "<br>"+ books[i].totalScore+"<br>"+books[i].imgurl+"<br>";
+				document.getElementById("btnimg").innerHTML = "<button>"+books[i].imgurl+"</button>";
+				document.getElementById("booktitle").innerHTML = books[i].title;
+				document.getElementById("score").innerHTML = books[i].totalScore;
 			}
-			document.getElementById("result").innerHTML = result;
 			
 		}
 	});
