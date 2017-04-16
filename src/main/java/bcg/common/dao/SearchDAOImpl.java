@@ -8,6 +8,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import bcg.common.entity.BookInfo;
 import bcg.common.entity.CompareBook;
 
 @Repository
@@ -35,6 +36,25 @@ public class SearchDAOImpl implements SearchDAO {
 		
 		if(result == null) {
 			result = sqlSession.selectList(stmt, param);
+			redisDAO.setObject(redisQuery, result);
+		}
+
+		return result;
+	}
+
+	@Override
+	public BookInfo getBookinfoWithIsbn(String isbn) {
+		// TODO Auto-generated method stub
+		String stmt = namespace + "selectByIsbn";
+		
+		Map<String, Object> param = new HashMap<String, Object>();
+		param.put("isbn", isbn);
+		
+		String redisQuery = stmt + ":" + isbn;
+		BookInfo result = redisDAO.getObject(redisQuery, BookInfo.class);
+		
+		if(result == null) {
+			result = sqlSession.selectOne(stmt, param);
 			redisDAO.setObject(redisQuery, result);
 		}
 

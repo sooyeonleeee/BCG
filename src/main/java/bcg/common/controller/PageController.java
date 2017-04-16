@@ -9,16 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import bcg.common.entity.BookInfo;
 import bcg.common.entity.CompareBook;
 import bcg.common.service.RecommendServiceImpl;
 import bcg.common.service.SearchServiceImpl;
+import bcg.common.service.ShowInfoService;
 
 @Controller
 public class PageController {
@@ -28,6 +25,9 @@ public class PageController {
 
 	@Autowired
 	RecommendServiceImpl rservice;
+	
+	@Autowired
+	ShowInfoService showInfoService;
 
 	@RequestMapping("/main")
 	public String gotoMain() {
@@ -95,12 +95,13 @@ public class PageController {
 		System.out.println("SYTEST: " + bookCode);
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("bookInfo");
+		mav.addObject("bookinfo", showInfoService.showInfo(bookCode));
+		
 		return mav;
 	}
 	
 	@RequestMapping(value = "/sortedbookinfo")
 	public ModelAndView getBookListByGenreWithClass(HttpServletResponse response, String genreCode, String classCode, Integer page) {
-		ObjectMapper mapper = new ObjectMapper();
 		classCode = classCode.equals("undefined") || classCode == null ? "totalscore" : classCode;
 		genreCode = genreCode.equals("undefined") ? null : genreCode;
 		
