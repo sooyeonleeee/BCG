@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+
+    
 var lastRequestTime = 0;
 var currPageInfo = 0;
 function sleep(ms) {
@@ -15,14 +17,15 @@ function getBookListFromServer() {
 		url : "/bcg/sortedbookinfo?" + urlParam,
 		success : function(response) {
 			console.log(response);
-			books = JSON.parse(response);
+			books = response;
 			size = books.length;
-			result="";
-			
+			console.log(size);
 			for(i=0;i < size;i++) {
-				document.getElementById("btnimg").innerHTML = "<button>"+books[i].imgurl+"</button>";
-				document.getElementById("booktitle").innerHTML = books[i].title;
-				document.getElementById("score").innerHTML = books[i].totalScore;
+				 document.getElementById("info").style.visibility ="visible";
+				  document.getElementById("booktitle").innerHTML += books[i].title;
+				  document.getElementById("scorebar").style.width="books[i].totalScore";
+				   document.getElementById("scorebar").innerHTML = books[i].totalScore+"%";
+				document.getElementById("btnimg").style.backgroundImage = "url(\'" + books[i].imgurl + "\')";
 			}
 			
 		}
@@ -30,7 +33,7 @@ function getBookListFromServer() {
 	
 }
 async function delayGetBookListFromServer(currTime) {
-	await sleep(3000);
+	await sleep(1000);
 	console.log("called : " + lastRequestTime + " : " + currTime);
 	if ( currTime == lastRequestTime) {
 		getBookListFromServer()

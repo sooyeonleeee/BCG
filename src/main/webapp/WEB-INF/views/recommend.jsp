@@ -53,6 +53,10 @@ body {
 	padding-top: 70px;
 }
 
+#info {
+	visibility: hidden;
+}
+
 </style>
 <script>
 $(document).ready(function(){

@@ -94,7 +94,7 @@ public class PageController {
 	public ModelAndView showBookInfo(String bookCode) {
 		System.out.println("SYTEST: " + bookCode);
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("compare");
+		mav.setViewName("bookInfo");
 		return mav;
 	}
 	
